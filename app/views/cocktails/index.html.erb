@@ -1,0 +1,22 @@
+<div class="banner flex-column center">
+  <div class="flex-column">
+    <h1 class="white text-center">All cocktails</h1>
+  </div>
+  <div class="row">
+    <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-secondary"%>
+  </div>
+</div>
+
+<ul class="container cards">
+  <% @cocktails.each do |cocktail| %>
+    <li>
+      <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/seed/picsum/400/200?grayscale)">
+        <h5 class="text-center"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+        <div class="row">
+          <%= link_to "Delete", cocktail_path(cocktail), method: :delete, class: "btn btn-outline-danger mr-2" %>
+          <%= link_to "Edit", edit_cocktail_path(cocktail), class: "btn btn-outline-dark" %>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>

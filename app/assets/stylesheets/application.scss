@@ -1,0 +1,147 @@
+@import "bootstrap/scss/bootstrap";
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+body {
+  background-color: white;
+}
+
+ul {
+  list-style:none;
+}
+
+a {
+  color: white;
+}
+
+li > a {
+  color: red;
+}
+
+a:hover {
+  color: gray;
+  text-decoration: none;
+}
+
+
+// ----- NAVBAR -----
+.sticky {
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+  z-index: 1;
+}
+
+// ----- FOOTER -----
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  padding: 0px 50px;
+  margin-top: 20px;
+  color: rgba(0,0,0,0.3);
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
+}
+
+
+// ----- SEARCHFORM -----
+.search-form-control {
+  position: relative;
+  width: 300px;
+  margin: 4px auto;
+}
+
+.search-form-control .btn {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
+}
+
+.search-form-control .form-control {
+  height: 3.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #E7E7E7;
+}
+
+.search-form-control .form-control:focus {
+  border: 1px solid #1EDD88;
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+
+// ----- BANNER -----
+.banner {
+  background-image: url(https://picsum.photos/seed/picsum/1200/300?grayscale);
+  background-size: cover;
+  height: 300px;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+// ----- CARDS -----
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card {
+  height: 120px;
+  box-shadow: 0px 4px 4px gray;
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+// ----- COLORS -----
+.white {
+  color: white;
+}
+
+// ----- D FLEX CENTER -----
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

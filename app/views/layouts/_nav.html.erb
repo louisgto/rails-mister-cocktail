@@ -1,0 +1,12 @@
+<nav class="navbar navbar-light bg-light sticky">
+  <div>
+      <%= link_to "/cocktails", class: "navbar-brand" do %>
+        <i class="fas fa-cocktail"></i>
+        <% end %>
+      <%= link_to "All cocktails", cocktails_path, class: "navbar-brand" %>
+    </div>
+    <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>

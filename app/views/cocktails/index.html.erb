@@ -11,7 +11,7 @@
   <% @cocktails.each do |cocktail| %>
     <li>
       <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/seed/picsum/400/200?grayscale)">
-        <h5 class="text-center"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+        <h4 class="text-center"><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
         <div class="row">
           <%= link_to "Delete", cocktail_path(cocktail), method: :delete, class: "btn btn-outline-danger mr-2" %>
           <%= link_to "Edit", edit_cocktail_path(cocktail), class: "btn btn-outline-dark" %>

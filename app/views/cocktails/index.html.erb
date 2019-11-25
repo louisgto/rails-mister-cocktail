@@ -3,20 +3,21 @@
     <h1 class="white text-center">All cocktails</h1>
   </div>
   <div class="row">
-    <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-secondary"%>
+    <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-dark"%>
   </div>
 </div>
 
 <ul class="container cards">
   <% @cocktails.each do |cocktail| %>
     <li>
-      <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/seed/picsum/400/200?grayscale)">
+      <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
         <h4 class="text-center"><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
         <div class="row d-flex">
-          <%= link_to "", cocktail_path(cocktail), method: :delete, class: "far fa-trash-alt btn btn-outline-danger mr-2" %>
-          <%= link_to "", edit_cocktail_path(cocktail), class: "far fa-edit btn btn-outline-dark" %>
+          <%= link_to "", cocktail_path(cocktail), method: :delete, class: "far fa-trash-alt btn btn-danger mr-2" %>
+          <%= link_to "", edit_cocktail_path(cocktail), class: "far fa-edit btn btn-dark" %>
         </div>
       </div>
     </li>
   <% end %>
 </ul>
+

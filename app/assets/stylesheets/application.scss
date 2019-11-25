@@ -19,6 +19,7 @@ body {
 
 ul {
   list-style:none;
+  padding: 0px;
 }
 
 a {
@@ -104,7 +105,7 @@ a:hover {
 
 // ----- BANNER -----
 .banner {
-  background-image: url(https://picsum.photos/seed/picsum/1200/300?grayscale);
+  background-image: url('https://res.cloudinary.com/dwbqswn7r/image/upload/v1574642342/cocktails_banner_kjsmpk.jpg');
   background-size: cover;
   height: 300px;
   vertical-align: middle;
@@ -144,4 +145,8 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.sepa {
+  border-right: 1px solid #333;
 }
